@@ -59,13 +59,4 @@ class Validation {
         else return false;
 	}
 
-	static function uploadFile( $str ) {
-
-		$document_regex = "/\.(pdf|png|jpeg|jpg)$/i)"; 
-
-		if ( preg_match( $document_regex, $str ) ) 
-			return true;
-        else return false;
-	}
-
 }
