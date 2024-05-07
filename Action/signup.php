@@ -10,9 +10,7 @@ if ( $_SERVER['REQUEST_METHOD'] == "POST" ) {
 	$user_name   = Validation::clean($_POST["username"]);
 	$full_name   = Validation::clean($_POST["fullname"]);
 	$email       = Validation::clean($_POST["email"]);
-	$password    = Validation::clean($_POST["password"]);
-	$re_password = Validation::clean($_POST["re_password"]);
-    
+	
     $data = "fname=".$full_name."&uname=".$user_name."&email=".$email;
 
     if ( !Validation::name( $full_name ) ) {

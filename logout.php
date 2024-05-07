@@ -6,5 +6,5 @@ include "Utils/Util.php";
 session_unset();
 session_destroy();
 
-$errorMessage = "logdded out! ";
+$errorMessage = "logded out! ";
 Util::redirect("login.php", "error", $errorMessage);

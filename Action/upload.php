@@ -12,6 +12,12 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
     $originalFileName = $_FILES["document"]["name"];
     $fileExtension    = pathinfo($originalFileName, PATHINFO_EXTENSION);
     $newFileName      = uniqid().".".$fileExtension;
+    $maxsize          = 2097152;
+
+    if(( $_FILES['uploaded_file']['size'] >= $maxsize )) {
+        $errorMessage = "File too large. File must be less than 2 megabytes.";
+	    Util::redirect( "../index.php", "error", $errorMessage );
+    }
 
     $allowedExtensions = array( "pdf", "png", "jpeg", "jpg" );
     if ( !in_array( $fileExtension, $allowedExtensions ) ) {

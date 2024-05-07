@@ -38,7 +38,8 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['user_id'])) {
 
                 </br>
                     <div class="form-group">
-                        <label for="document">Upload Document (PDF, PNG, JPEG, JPG):</label>
+                        <label for="document">Upload Document (PDF, PNG, JPEG, JPG):</label></br>
+                        <p>File must be less than 2 megabytes.</p>
                         <input type="file" class="form-control-file" id="document" name="document" accept=".pdf, .png, .jpeg, .jpg" required>
                     </div>
                 </br>
